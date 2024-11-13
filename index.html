@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard - Exam Registration System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Student Dashboard - Brinstar Exam Registration System</h1>
+</header>
+
+<div class="container">
+
+  <!-- Welcome Section -->
+  <div class="dashboard-section">
+    <h2>Welcome, [Student Name]</h2>
+    <p>Your NSHE ID: [NSHE Number]</p>
+    <p>Role: Student</p>
+  </div>
+
+  <!-- Exam Registration Section -->
+  <div class="dashboard-section">
+    <h2>Book an Exam</h2>
+    <form id="exam-registration-form">
+      <label for="exam-select">Select Exam:</label>
+      <select id="exam-select" name="exam">
+        <option value="" disabled selected>Select an exam...</option>
+        <!-- Example exams. Replace with dynamic options from the database -->
+        <option value="exam1">Math 101 Midterm</option>
+        <option value="exam2">English 201 Final</option>
+        <option value="exam3">Science 202 Quiz</option>
+      </select>
+      <button type="submit" class="btn-primary">Book Exam</button>
+    </form>
+  </div>
+
+  <!-- Booking Confirmation Section -->
+  <div class="dashboard-section">
+    <h2>Confirmation</h2>
+    <p>Your recent booking details will appear here once an exam is booked.</p>
+  </div>
+
+  <!-- Reservation History Section -->
+  <div class="dashboard-section">
+    <h2>Reservation History</h2>
+    <form id="search-history-form">
+      <label for="search-term">Search Reservations:</label>
+      <input type="text" id="search-term" placeholder="Enter exam name or date">
+      <button type="submit" class="btn-primary">Search</button>
+    </form>
+    <div id="history-results">
+      <!-- Reservation history results will populate here -->
+      <p>No reservations found.</p>
+    </div>
+  </div>
+
+  <!-- Cancel Reservation Section -->
+  <div class="dashboard-section">
+    <h2>Cancel a Reservation</h2>
+    <form id="cancel-reservation-form">
+      <label for="cancel-exam-select">Select an Exam to Cancel:</label>
+      <select id="cancel-exam-select" name="cancel_exam">
+        <option value="" disabled selected>Select an exam to cancel...</option>
+        <!-- Dynamically populated booked exams -->
+      </select>
+      <button type="submit" class="btn-primary">Cancel Reservation</button>
+    </form>
+  </div>
+
+</div>
+
+</body>
+</html>
